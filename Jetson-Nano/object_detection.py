@@ -34,7 +34,7 @@ try:
 
         # Distance estimation
         speed_command = "FORWARD"
-        min_distance = 1000
+        min_distance = 1000  # large initial value
 
         for result in results:
             for box in result.boxes:
@@ -57,8 +57,9 @@ try:
         ser.write((speed_command + "\n").encode())
         print(f"[INFO] Sent: {speed_command}, Distance: {min_distance:.2f}")
 
-        # Show video
+        # Show video with detections
         cv2.imshow("YOLOv8 Detection", frame)
+
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 

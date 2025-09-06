@@ -1,16 +1,19 @@
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response, jsonify
 import cv2
 import threading
 import serial
 
 app = Flask(__name__)
 
-# Camera setup
+# === Global state ===
+current_command = "STOP"
+gps_data = {"lat": 0.0, "lon": 0.0}
+
+# === Camera ===
 camera = cv2.VideoCapture(0)
 
-# GPS setup
+# === GPS ===
 gps = serial.Serial("/dev/ttyUSB1", baudrate=9600, timeout=1)
-gps_data = {"lat": 0.0, "lon": 0.0}
 
 def parse_gpgga(sentence):
     try:
@@ -47,12 +50,19 @@ def gen_frames():
 
 @app.route('/')
 def index():
-    return render_template("index.html", gps=gps_data)
+    return render_template("index.html")
 
 @app.route('/video_feed')
 def video_feed():
     return Response(gen_frames(),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@app.route('/status')
+def status():
+    return jsonify({
+        "command": current_command,
+        "gps": gps_data
+    })
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
