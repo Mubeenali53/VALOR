@@ -182,14 +182,9 @@ python3 jetson/app.py
 ## 👨‍💻 Authors
 
 - **Syed Mubeen Ali**  
-  Electronics and Communication Engineering (ECE)  
-  Muffakham Jah College of Engineering and Technology  
+ 
   📧 Email: syedmubeenali553@gmail.com
 
-- **Danish Ahmed**  
-  Electronics and Communication Engineering (ECE)  
-  Muffakham Jah College of Engineering and Technology  
+- **Danish Ahmed**
 
-- **Syed Zeeshan**  
-  Electronics and Communication Engineering (ECE)  
-  Muffakham Jah College of Engineering and Technology  
+- **Syed Zeeshan**
