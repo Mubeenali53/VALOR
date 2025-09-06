@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALOR - Robot Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+    <h1>🚘 VALOR Dashboard</h1>
+
+    <!-- Live Camera -->
+    <img id="video" src="{{ url_for('video_feed') }}" width="640" height="480" alt="Live camera feed" />
+
+    <!-- Status -->
+    <div class="status-box">
+        <p><strong>Current Command:</strong> <span id="cmd">Loading...</span></p>
+        <p><strong>GPS:</strong> <span id="gps">Loading...</span></p>
+    </div>
+
+    <!-- Map -->
+    <div id="map"></div>
+
+    <script src="script.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</body>
+</html>
