@@ -65,6 +65,8 @@ VALOR/
 └── README.md # Project showcase
 
 ---
+```
+
 ## 📊 System Architecture
 
 The architecture of **VALOR (Vision-based Autonomous Location and Obstacle-avoidance Robot)** is divided into three major layers:
@@ -125,6 +127,7 @@ The dataset contains diverse traffic scenarios from Indian roads, including cars
 📌 *Note: Dataset is large, so it is not included directly in this repository. Please download it separately from the official source above.*
 
 ---
+
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
