@@ -63,9 +63,9 @@ VALOR/
 │ └── wiring_diagram.png
 │
 └── README.md # Project showcase
-
----
 ```
+---
+
 
 ## 📊 System Architecture
 
