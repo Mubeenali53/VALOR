@@ -39,6 +39,8 @@ It combines **YOLO-based object detection**, **GPS tracking**, and **motor contr
 
 ## 📂 Repository Structure
 
+```planetext
+
 VALOR/
 │── esp32/ # ESP32 firmware for motor control
 │ └── motor_control.ino
@@ -101,7 +103,7 @@ python3 jetson/app.py
 
 ### 🎥 Demo
 
--Video Link :-
+- Video Link :-
 
 ## 📜 License
 
