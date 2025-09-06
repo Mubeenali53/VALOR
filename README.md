@@ -99,6 +99,21 @@ python3 jetson/app.py
 
 - Open browser at http://<jetson-ip>:5000 to access UI
 
+## 📂 Dataset
+
+This project uses the **IDD (Indian Driving Dataset)** developed by IIIT Hyderabad.  
+The dataset contains diverse traffic scenarios from Indian roads, including cars, buses, pedestrians, two-wheelers, and animals — making it suitable for training robust models for mixed-traffic environments.
+
+- **Dataset Name:** Indian Driving Dataset (IDD)
+- **Source:** IIIT Hyderabad
+- **Download Link:** [Indian Driving Dataset - IDD](https://idd.insaan.iiit.ac.in/dataset/download)
+- **Usage in VALOR:**  
+  - Trained YOLOv8 model for object detection on Indian road scenarios  
+  - Used annotated images for segmentation and bounding box extraction  
+  - Classes used in this project: Pedestrians, Cars, Buses, Two-Wheelers, Animals  
+
+📌 *Note: Dataset is large, so it is not included directly in this repository. Please download it separately from the official source above.*
+
 ## 📊 System Architecture
 
 ### 🎥 Demo
